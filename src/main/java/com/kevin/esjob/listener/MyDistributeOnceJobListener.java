@@ -2,6 +2,7 @@ package com.kevin.esjob.listener;
 
 import org.apache.shardingsphere.elasticjob.infra.listener.ShardingContexts;
 import org.apache.shardingsphere.elasticjob.lite.api.listener.AbstractDistributeOnceElasticJobListener;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import org.apache.shardingsphere.elasticjob.lite.api.listener.AbstractDistribute
  * @author zhaowenjian
  * @since 2021/6/17 11:17
  */
+@Component
 public class MyDistributeOnceJobListener extends AbstractDistributeOnceElasticJobListener{
     static long startedTimeoutMilliseconds = 6000L;
     static long completedTimeoutMilliseconds = 6000L;

@@ -15,7 +15,7 @@ import java.util.List;
  * @author zhaowenjian
  * @since 2021/5/17 18:12
  */
-@Component
+//@Component
 public class Second implements DataflowJob {
     int times = 0;
     int value = 0;
@@ -25,6 +25,7 @@ public class Second implements DataflowJob {
     //如果采用流式作业处理方式，建议processData处理数据后更新其状态，避免fetchData再次抓取到，从而使得作业永不停止。
     // 流式数据处理参照TbSchedule设计，适用于不间歇的数据处理。
     // 流式处理的配置 elasticjob.jobs.Second.props=streaming.process=true
+
     @Override
     public List fetchData(ShardingContext shardingContext) {
 
